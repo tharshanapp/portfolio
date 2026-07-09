@@ -46,6 +46,12 @@ export default function MyApplications() {
     },
   ];
 
+  const handleButtonClick = (url, isPlaceholder) => {
+    if (!isPlaceholder) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#6366f1]/10 to-transparent pointer-events-none" />
@@ -113,24 +119,21 @@ export default function MyApplications() {
                     </div>
                   </div>
 
-                  {/* CHANGED AND UPDATED BUTTON BLOCK BELOW */}
+                  {/* FIXED BUTTON - Using motion.button with whileHover/whileTap wrapper */}
                   <div>
                     <motion.button
-                      onClick={(e) => {
-                        e.preventDefault(); 
-                        if (!isPlaceholder) {
-                          window.open(app.url, "_blank", "noopener,noreferrer");
-                        }
-                      }}
-                      whileHover={{ scale: isPlaceholder? 1: 1.02 }}
-                      whileTap={{ scale: isPlaceholder? 1: 0.98 }}
+                      type="button"
+                      whileHover={!isPlaceholder ? { scale: 1.02 } : {}}
+                      whileTap={!isPlaceholder ? { scale: 0.98 } : {}}
+                      onClick={() => handleButtonClick(app.url, isPlaceholder)}
+                      disabled={isPlaceholder}
                       className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-medium transition-all shadow-lg ${
                         isPlaceholder
                           ? "bg-white/10 text-white/40 cursor-not-allowed border border-white/5"
                           : "bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] text-white shadow-[#6366f1]/30 hover:shadow-[#6366f1]/50 cursor-pointer"
                       }`}
                     >
-                      {isPlaceholder? "Coming Soon": "Launch App"}
+                      {isPlaceholder ? "Coming Soon" : "Launch App"}
                       {!isPlaceholder && <ExternalLink size={16} />}
                     </motion.button>
                   </div>
