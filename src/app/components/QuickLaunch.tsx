@@ -7,7 +7,7 @@ export default function QuickLaunch() {
       icon: Rocket,
       label: "Open AI Assistant",
       color: "from-[#6366f1] to-[#8b5cf6]",
-      url: "#",
+      url: "https://gov-ai-assistant-lwfw3x642ru9spxrobuxbt.streamlit.app/",
     },
     {
       icon: BarChart3,
