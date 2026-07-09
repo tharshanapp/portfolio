@@ -18,7 +18,7 @@ export default function MyApplications() {
       tech: "Power BI, SQL Server, Python",
       color: "from-[#8b5cf6] to-[#a78bfa]",
     
-      href: "https://gov-ai-assistant-lwfw3x642ru9spxrobuxbt.streamlit.app/",
+      url: "https://gov-ai-assistant-lwfw3x642ru9spxrobuxbt.streamlit.app/",
     },
     {
       icon: FileText,
@@ -94,7 +94,7 @@ export default function MyApplications() {
                   <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#6366f1]/10 to-transparent rounded-full blur-2xl pointer-events-none" />
 
                   <div className="flex-grow">
-                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${app.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-[#6366f1]/30 text-white`}>
+                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${app.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-[#6366f1]/30`}>
                       <Icon size={32} />
                     </div>
 
