@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"; // Note: Changed from "motion/react" to match standard package entry points if needed
+import { motion } from "framer-motion"; // or "motion/react" depending on your setup
 import { ExternalLink, Sparkles, TrendingUp, FileText, Package, Workflow } from "lucide-react";
 
 export default function MyApplications() {
@@ -17,7 +17,7 @@ export default function MyApplications() {
       description: "Financial forecasting and planning solution with predictive analytics.",
       tech: "Power BI, SQL Server, Python",
       color: "from-[#8b5cf6] to-[#a78bfa]",
-      url: "#", // Replace with actual deployment link when ready
+      url: "#",
     },
     {
       icon: FileText,
@@ -47,12 +47,9 @@ export default function MyApplications() {
 
   return (
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white">
-      {/* Subtle Background Glow */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#6366f1]/10 to-transparent pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        
-        {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,7 +72,6 @@ export default function MyApplications() {
           <div className="w-24 h-1 bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] mx-auto rounded-full mt-6" />
         </motion.div>
 
-        {/* Applications Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {applications.map((app, index) => {
             const Icon = app.icon;
@@ -91,16 +87,11 @@ export default function MyApplications() {
                 whileHover={{ y: -8 }}
                 className="relative group"
               >
-                {/* Card Hover Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[#6366f1]/20 to-[#8b5cf6]/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
-                {/* Main Card Container */}
                 <div className="relative p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-[#6366f1]/20 hover:border-[#6366f1]/40 transition-all overflow-hidden h-full flex flex-col justify-between">
-                  
-                  {/* Decorative background circle */}
                   <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#6366f1]/10 to-transparent rounded-full blur-2xl pointer-events-none" />
 
-                  {/* Top Content */}
                   <div className="flex-grow">
                     <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${app.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-[#6366f1]/30 text-white`}>
                       <Icon size={32} />
@@ -109,7 +100,6 @@ export default function MyApplications() {
                     <h3 className="text-xl font-semibold mb-2">{app.name}</h3>
                     <p className="text-sm text-white/70 mb-4">{app.description}</p>
 
-                    {/* Tech Badges */}
                     <div className="flex flex-wrap gap-2 mb-6">
                       {app.tech.split(", ").map((tech, techIndex) => (
                         <span
@@ -122,15 +112,13 @@ export default function MyApplications() {
                     </div>
                   </div>
 
-                  {/* Action Link / Button */}
+                  {/* CHANGED AND UPDATED BUTTON BLOCK BELOW */}
                   <div>
-                    <motion.a
-                      href={app.url}
-                      target={isPlaceholder? undefined : "_blank"}
-                      rel={isPlaceholder ? undefined: "noopener noreferrer"}
+                    <motion.button
                       onClick={(e) => {
-                        if (isPlaceholder) {
-                          e.preventDefault(); // Stops page jump if url is '#'
+                        e.preventDefault(); 
+                        if (!isPlaceholder) {
+                          window.open(app.url, "_blank", "noopener,noreferrer");
                         }
                       }}
                       whileHover={{ scale: isPlaceholder? 1: 1.02 }}
@@ -138,12 +126,12 @@ export default function MyApplications() {
                       className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-medium transition-all shadow-lg ${
                         isPlaceholder
                           ? "bg-white/10 text-white/40 cursor-not-allowed border border-white/5"
-                          : "bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] text-white shadow-[#6366f1]/30 hover:shadow-[#6366f1]/50"
+                          : "bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] text-white shadow-[#6366f1]/30 hover:shadow-[#6366f1]/50 cursor-pointer"
                       }`}
                     >
                       {isPlaceholder? "Coming Soon": "Launch App"}
                       {!isPlaceholder && <ExternalLink size={16} />}
-                    </motion.a>
+                    </motion.button>
                   </div>
 
                 </div>
