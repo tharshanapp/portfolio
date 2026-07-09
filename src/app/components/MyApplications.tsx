@@ -82,7 +82,7 @@ export default function MyApplications() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {applications.map((app, index) => {
             const Icon = app.icon;
-            const isPlaceholder = app.url === "#";
+            const isPlaceholder = app.url === "https://gov-ai-assistant-lwfw3x642ru9spxrobuxbt.streamlit.app/";
 
             return (
               <motion.div
@@ -119,7 +119,7 @@ export default function MyApplications() {
                     </div>
                   </div>
 
-                  {/* FIXED BUTTON - Using motion.button with whileHover/whileTap wrapper */}
+                  {/* FIXED BUTTON - Using motion. button with whileHover/whileTap wrapper */}
                   <div>
                     <motion.button
                       type="button"
@@ -133,7 +133,7 @@ export default function MyApplications() {
                           : "bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] text-white shadow-[#6366f1]/30 hover:shadow-[#6366f1]/50 cursor-pointer"
                       }`}
                     >
-                      {isPlaceholder ? "Coming Soon" : "Launch App"}
+                      {isPlaceholder? "Coming Soon": "Launch App"}
                       {!isPlaceholder && <ExternalLink size={16} />}
                     </motion.button>
                   </div>
