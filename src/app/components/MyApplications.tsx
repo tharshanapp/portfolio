@@ -9,7 +9,7 @@ export default function MyApplications() {
       description: "AI-powered support assistant for user guidance and automated problem resolution.",
       tech: "OpenAI, React, Node.js",
       color: "from-[#6366f1] to-[#8b5cf6]",
-      url: "https://gov-ai-assistant-lwfw3x642ru9spxrobuxbt.streamlit.app/",
+     src="https://opengov-ai-assistant.onrender.com"
     },
     {
       icon: TrendingUp,
