@@ -9,7 +9,7 @@ export default function MyApplications() {
       description: "AI-powered support assistant for user guidance and automated problem resolution.",
       tech: "OpenAI, React, Node.js",
       color: "from-[#6366f1] to-[#8b5cf6]",
-     src="https://opengov-ai-assistant.onrender.com"
+      url: "https://gov-ai-assistant-lwfw3x642ru9spxrobuxbt.streamlit.app/",
     },
     {
       icon: TrendingUp,
@@ -17,8 +17,7 @@ export default function MyApplications() {
       description: "Financial forecasting and planning solution with predictive analytics.",
       tech: "Power BI, SQL Server, Python",
       color: "from-[#8b5cf6] to-[#a78bfa]",
-    
-      url: "https://gov-ai-assistant-lwfw3x642ru9spxrobuxbt.streamlit.app/",
+      url: "#",
     },
     {
       icon: FileText,
@@ -46,7 +45,7 @@ export default function MyApplications() {
     },
   ];
 
-  const handleButtonClick = (url, isPlaceholder) => {
+  const handleButtonClick = (url: string, isPlaceholder: boolean) => {
     if (!isPlaceholder) {
       window.open(url, "_blank", "noopener,noreferrer");
     }
@@ -82,7 +81,7 @@ export default function MyApplications() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {applications.map((app, index) => {
             const Icon = app.icon;
-            const isPlaceholder = app.url === "https://gov-ai-assistant-lwfw3x642ru9spxrobuxbt.streamlit.app/";
+            const isPlaceholder = app.url === "#";
 
             return (
               <motion.div
