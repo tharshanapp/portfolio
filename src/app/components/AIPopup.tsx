@@ -71,7 +71,7 @@ const AIPopup = () => {
               {/* AI Assistant Iframe */}
               <iframe
                 
-                src="https://gov-ai-assistant-lwfw3x642ru9spxrobuxbt.streamlit.app"
+                src="https://opengov-ai-assistant.onrender.com"
                 
                 className="w-full h-[calc(85vh-52px)] border-0"
                 title="OpenGov AI Assistant"
