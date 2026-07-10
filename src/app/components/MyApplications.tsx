@@ -17,7 +17,7 @@ export default function MyApplications() {
       description: "Financial forecasting and planning solution with predictive analytics.",
       tech: "Power BI, SQL Server, Python",
       color: "from-[#8b5cf6] to-[#a78bfa]",
-      url: "#",
+      url: "http://relaxxslippers.runasp.net",
     },
     {
       icon: FileText,
