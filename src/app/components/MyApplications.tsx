@@ -6,8 +6,8 @@ export default function MyApplications() {
     {
       icon: Sparkles,
       name: "AI Helpdesk Assistant",
-      description: "AI-powered support assistant for user guidance and automated problem resolution.",
-      tech: "OpenAI, React, Node.js",
+      description: "AI-powered support assistant for Officers relating to Regulations, Guidelines, Circulars.",
+      tech: "OpenAI, Groq API Key, Free cloud AI",
       color: "from-[#6366f1] to-[#8b5cf6]",
       url: "https://gov-ai-assistant-lwfw3x642ru9spxrobuxbt.streamlit.app/",
     },
@@ -29,8 +29,8 @@ export default function MyApplications() {
     },
     {
       icon: Package,
-      name: "Asset Management Platform",
-      description: "Enterprise asset tracking and management solution for large organizations.",
+      name: "e_Commerce Platform",
+      description: "e_Commerce management solution for organizations.",
       tech: "ASP.NET, SQL Server, REST API",
       color: "from-[#a78bfa] to-[#6366f1]",
       url: "http://relaxxslippers.runasp.net",
