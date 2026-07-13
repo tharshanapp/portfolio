@@ -9,7 +9,7 @@ export default function MyApplications() {
       description: "AI-powered support assistant for Officers relating to Regulations, Guidelines, Circulars.",
       tech: "OpenAI, Groq API Key, Free cloud AI",
       color: "from-[#6366f1] to-[#8b5cf6]",
-      url: "https://gov-ai-assistant-lwfw3x642ru9spxrobuxbt.streamlit.app/",
+      url: "https://gov-ai-assistant-nq4qdthattecjvux2owr4z.streamlit.app/",
     },
     {
       icon: TrendingUp,
