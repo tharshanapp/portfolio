@@ -13,11 +13,11 @@ export default function MyApplications() {
     },
     {
       icon: TrendingUp,
-      name: "Budget Forecasting System",
-      description: "Financial forecasting and planning solution with predictive analytics.",
-      tech: "Power BI, SQL Server, Python",
+      name: "FinBrain",
+      description: "AI-Powered Intelligent Financial Tracking System.",
+      tech: "Google Script, GEMINI-API, Web APP",
       color: "from-[#8b5cf6] to-[#a78bfa]",
-      url: "#",
+      url: "https://script.google.com/macros/s/AKfycbw4NyBFCE4ADRTt7Wn2b8-rjXE3Y4aF2bGV1KG_9lVh1KnWXeu9bRqeuDFlZRs9wz66/exec",
     },
     {
       icon: FileText,
